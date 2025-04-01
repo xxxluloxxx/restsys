@@ -1,0 +1,1954 @@
+{
+    "info": {
+        "_postman_id": "restsys-collection",
+        "name": "RestSys API",
+        "description": "Colección de endpoints para el sistema de gestión de restaurante",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Administradores",
+            "item": [
+                {
+                    "name": "Autenticar administrador",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores/auth?email={{email}}&password={{password}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores",
+                                "auth"
+                            ],
+                            "query": [
+                                {
+                                    "key": "email",
+                                    "value": "{{email}}"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "{{password}}"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener todos los administradores",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener administrador por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener administrador por email",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores/email/{{email}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores",
+                                "email",
+                                "{{email}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener administrador por número de documento",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores/documento/{{numeroDocumento}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores",
+                                "documento",
+                                "{{numeroDocumento}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear administrador",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"tipoDocumento\": \"DNI\",\n    \"numeroDocumento\": \"12345678\",\n    \"nombre\": \"Juan\",\n    \"apellido\": \"Pérez\",\n    \"email\": \"juan@restaurant.com\",\n    \"password\": \"123456\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar administrador",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"tipoDocumento\": \"DNI\",\n    \"numeroDocumento\": \"12345678\",\n    \"nombre\": \"Juan\",\n    \"apellido\": \"Pérez\",\n    \"email\": \"juan@restaurant.com\",\n    \"password\": \"123456\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar administrador",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/administradores/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "administradores",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Usuarios",
+            "item": [
+                {
+                    "name": "Obtener todos los usuarios",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener usuario por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener usuario por email",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios/email/{{email}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios",
+                                "email",
+                                "{{email}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener usuario por número de documento",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios/documento/{{numeroDocumento}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios",
+                                "documento",
+                                "{{numeroDocumento}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear usuario",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"usuario@ejemplo.com\",\n    \"password\": \"contraseña123\",\n    \"nombre\": \"Nombre Usuario\",\n    \"apellido\": \"Apellido Usuario\",\n    \"numeroDocumento\": \"12345678\",\n    \"telefono\": \"123456789\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar usuario",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"usuario@ejemplo.com\",\n    \"nombre\": \"Nombre Actualizado\",\n    \"apellido\": \"Apellido Actualizado\",\n    \"telefono\": \"987654321\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar usuario",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/usuarios/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "usuarios",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Mesas",
+            "item": [
+                {
+                    "name": "Obtener todas las mesas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener mesa por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener mesa por número",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas/numero/{{numeroMesa}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas",
+                                "numero",
+                                "{{numeroMesa}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener mesas por estado",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas/estado/{{estado}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas",
+                                "estado",
+                                "{{estado}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear mesa",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"numeroMesa\": 1,\n    \"capacidad\": 4,\n    \"estado\": \"disponible\",\n    \"ubicacion\": \"interior\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar mesa",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"numeroMesa\": 1,\n    \"capacidad\": 6,\n    \"estado\": \"ocupada\",\n    \"ubicacion\": \"terraza\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar mesa",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/mesas/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "mesas",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Meseros",
+            "item": [
+                {
+                    "name": "Obtener todos los meseros",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener mesero por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener mesero por usuario",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros/usuario/{{usuarioId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros",
+                                "usuario",
+                                "{{usuarioId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener meseros por estado",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros/estado/{{estado}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros",
+                                "estado",
+                                "{{estado}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear mesero",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"usuario\": {\n        \"id\": 1\n    },\n    \"estado\": \"activo\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar mesero",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"usuario\": {\n        \"id\": 1\n    },\n    \"estado\": \"inactivo\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar mesero",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/meseros/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "meseros",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Categorías",
+            "item": [
+                {
+                    "name": "Obtener todas las categorías",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/categorias",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener categoría por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/categorias/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "categorias",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener categoría por nombre",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/categorias/nombre/{{nombre}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "categorias",
+                                "nombre",
+                                "{{nombre}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear categoría",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Bebidas\",\n    \"descripcion\": \"Bebidas alcohólicas y no alcohólicas\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/categorias",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar categoría",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Bebidas\",\n    \"descripcion\": \"Bebidas alcohólicas, no alcohólicas y cócteles\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/categorias/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "categorias",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar categoría",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/categorias/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "categorias",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Productos",
+            "item": [
+                {
+                    "name": "Obtener todos los productos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/productos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener producto por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/productos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener producto por nombre",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/productos/nombre/{{nombre}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                "nombre",
+                                "{{nombre}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener productos por categoría",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/productos/categoria/{{categoriaId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                "categoria",
+                                "{{categoriaId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener productos por disponibilidad",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/productos/disponible/{{disponible}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                "disponible",
+                                "{{disponible}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear producto",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"categoria\": {\n        \"id\": 1\n    },\n    \"nombre\": \"Coca Cola\",\n    \"descripcion\": \"Bebida gaseosa\",\n    \"precio\": 2.50,\n    \"disponible\": true,\n    \"imagenUrl\": \"http://ejemplo.com/cocacola.jpg\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/productos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar producto",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"categoria\": {\n        \"id\": 1\n    },\n    \"nombre\": \"Coca Cola\",\n    \"descripcion\": \"Bebida gaseosa 600ml\",\n    \"precio\": 3.00,\n    \"disponible\": true,\n    \"imagenUrl\": \"http://ejemplo.com/cocacola.jpg\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/productos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar producto",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/productos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Pedidos",
+            "item": [
+                {
+                    "name": "Obtener todos los pedidos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener pedido por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener pedidos por mesa",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/mesa/{{mesaId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "mesa",
+                                "{{mesaId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener pedidos por mesero",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/mesero/{{meseroId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "mesero",
+                                "{{meseroId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener pedidos por estado",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/estado/{{estado}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "estado",
+                                "{{estado}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener pedidos por fecha",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/fecha?fechaInicio=2024-01-01T00:00:00&fechaFin=2024-01-31T23:59:59",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "fecha"
+                            ],
+                            "query": [
+                                {
+                                    "key": "fechaInicio",
+                                    "value": "2024-01-01T00:00:00"
+                                },
+                                {
+                                    "key": "fechaFin",
+                                    "value": "2024-01-31T23:59:59"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear pedido",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"mesa\": {\n        \"id\": 1\n    },\n    \"mesero\": {\n        \"id\": 1\n    },\n    \"estado\": \"pendiente\",\n    \"observaciones\": \"Sin sal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar pedido",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"mesa\": {\n        \"id\": 1\n    },\n    \"mesero\": {\n        \"id\": 1\n    },\n    \"estado\": \"en_preparacion\",\n    \"observaciones\": \"Sin sal, bien cocido\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar pedido",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/pedidos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Detalles de Pedido",
+            "item": [
+                {
+                    "name": "Obtener todos los detalles de pedido",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener detalle de pedido por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener detalles por pedido",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido/pedido/{{pedidoId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "pedido",
+                                "{{pedidoId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener detalles por producto",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido/producto/{{productoId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "producto",
+                                "{{productoId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear detalle de pedido",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"pedido\": {\n        \"id\": 1\n    },\n    \"producto\": {\n        \"id\": 1\n    },\n    \"cantidad\": 2,\n    \"precioUnitario\": 10.00,\n    \"subtotal\": 20.00,\n    \"observaciones\": \"Sin sal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar detalle de pedido",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"pedido\": {\n        \"id\": 1\n    },\n    \"producto\": {\n        \"id\": 1\n    },\n    \"cantidad\": 3,\n    \"precioUnitario\": 10.00,\n    \"subtotal\": 30.00,\n    \"observaciones\": \"Sin sal, bien cocido\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar detalle de pedido",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/detalles-pedido/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reservas",
+            "item": [
+                {
+                    "name": "Obtener todas las reservas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas"
+                            ]
+                        },
+                        "response": [
+                            {
+                                "name": "Respuesta exitosa",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{base_url}}/api/reservas",
+                                        "host": [
+                                            "{{base_url}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "reservas"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": [
+                                    {
+                                        "id": 1,
+                                        "mesaId": 1,
+                                        "numeroMesa": 4,
+                                        "nombreCliente": "Juan Pérez",
+                                        "telefono": "123456789",
+                                        "fechaReserva": "2025-03-30",
+                                        "horaReserva": "12:00",
+                                        "numeroPersonas": 4,
+                                        "estado": "confirmada",
+                                        "observaciones": "Mesa junto a la ventana"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Obtener reserva por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener reservas por mesa",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/mesa/{{mesaId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "mesa",
+                                "{{mesaId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener reservas por estado",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/estado/{{estado}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "estado",
+                                "{{estado}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener reservas por fecha",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/fecha?fechaInicio=2024-01-01T00:00:00&fechaFin=2024-01-31T23:59:59",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "fecha"
+                            ],
+                            "query": [
+                                {
+                                    "key": "fechaInicio",
+                                    "value": "2024-01-01T00:00:00"
+                                },
+                                {
+                                    "key": "fechaFin",
+                                    "value": "2024-01-31T23:59:59"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener reservas por nombre de cliente",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/cliente?nombreCliente=Juan",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "cliente"
+                            ],
+                            "query": [
+                                {
+                                    "key": "nombreCliente",
+                                    "value": "Juan"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear reserva",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"mesa\": {\n        \"id\": 1\n    },\n    \"nombreCliente\": \"Juan Pérez\",\n    \"telefono\": \"123456789\",\n    \"fechaReserva\": \"2024-02-01T19:00:00\",\n    \"horaReserva\": \"19:00:00\",\n    \"numeroPersonas\": 4,\n    \"estado\": \"pendiente\",\n    \"observaciones\": \"Mesa cerca de la ventana\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar reserva",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"mesa\": {\n        \"id\": 1\n    },\n    \"nombreCliente\": \"Juan Pérez\",\n    \"telefono\": \"123456789\",\n    \"fechaReserva\": \"2024-02-01T19:00:00\",\n    \"horaReserva\": \"19:00:00\",\n    \"numeroPersonas\": 4,\n    \"estado\": \"confirmada\",\n    \"observaciones\": \"Mesa cerca de la ventana, sin aire acondicionado\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar reserva",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reservas/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reservas",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Roles",
+            "item": [
+                {
+                    "name": "Obtener todos los roles",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/roles",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener rol por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/roles/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear rol",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"ADMIN\",\n    \"descripcion\": \"Rol de administrador del sistema\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/roles",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar rol",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"ADMIN\",\n    \"descripcion\": \"Rol de administrador del sistema\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/roles/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar rol",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/roles/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Permisos",
+            "item": [
+                {
+                    "name": "Obtener todos los permisos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/permisos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "permisos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener permiso por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/permisos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "permisos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear permiso",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"CREATE_USER\",\n    \"descripcion\": \"Permiso para crear usuarios\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/permisos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "permisos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar permiso",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"CREATE_USER\",\n    \"descripcion\": \"Permiso para crear usuarios\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/permisos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "permisos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar permiso",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/permisos/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "permisos",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Permisos-Roles",
+            "item": [
+                {
+                    "name": "Obtener permisos por rol",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/roles/{{id}}/permisos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles",
+                                "{{id}}",
+                                "permisos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Asignar permisos a rol",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\n    {\n        \"id\": 1\n    },\n    {\n        \"id\": 2\n    }\n]"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/roles/{{id}}/permisos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles",
+                                "{{id}}",
+                                "permisos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar permisos de rol",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/roles/{{id}}/permisos/{{permisoId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "roles",
+                                "{{id}}",
+                                "permisos",
+                                "{{permisoId}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "General",
+            "item": [
+                {
+                    "name": "Obtener todos los parámetros generales",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/general",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "general"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener parámetro general por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/general/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "general",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear parámetro general",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"parametro\": \"IVA\",\n    \"valor\": \"0.19\",\n    \"descripcion\": \"Impuesto al Valor Agregado\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/general",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "general"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar parámetro general",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"parametro\": \"IVA\",\n    \"valor\": \"0.19\",\n    \"descripcion\": \"Impuesto al Valor Agregado (19%)\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/general/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "general",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar parámetro general",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/general/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "general",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reportes",
+            "item": [
+                {
+                    "name": "Obtener productos más vendidos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/reportes/productos-mas-vendidos",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reportes",
+                                "productos-mas-vendidos"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8080"
+        }
+    ]
+}

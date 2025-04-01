@@ -1,0 +1,51 @@
+{
+    "menu": [
+        {
+            "label": "Home",
+            "items": [
+                {
+                    "label": "Dashboard",
+                    "icon": "pi pi-fw pi-home",
+                    "to": "/dashboard"
+                }
+            ]
+        },
+        {
+            "label": "Macawa",
+            "icon": "pi pi-fw pi-briefcase",
+            "to": "/pages",
+            "items": [
+                {
+                    "label": "Pedidos",
+                    "icon": "pi pi-fw pi-receipt",
+                    "to": "/pages/pedidos"
+                },
+                {
+                    "label": "Productos",
+                    "icon": "pi pi-fw pi-box",
+                    "to": "/pages/productosrest"
+                },
+                {
+                    "label": "Categorias",
+                    "icon": "pi pi-fw pi-list",
+                    "to": "/pages/categorias"
+                },
+                {
+                    "label": "Mesas",
+                    "icon": "pi pi-fw pi-tablet",
+                    "to": "/pages/mesas"
+                },
+                {
+                    "label": "Meseros",
+                    "icon": "pi pi-fw pi-user",
+                    "to": "/pages/meseros"
+                },
+                {
+                    "label": "Reservas",
+                    "icon": "pi pi-fw pi-book",
+                    "to": "/pages/reservas"
+                }
+            ]
+        }
+    ]
+}

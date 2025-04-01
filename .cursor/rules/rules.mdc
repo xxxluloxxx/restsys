@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+cada que crees, elimines o modifiques un endpoint, tambien agrega el cambio en el archivo de la coleccion de postman
