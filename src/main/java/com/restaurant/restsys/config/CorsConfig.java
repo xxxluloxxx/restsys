@@ -15,7 +15,7 @@ public class CorsConfig implements WebMvcConfigurer {
                         "https://loquacious-unicorn-540f7f.netlify.app",
                         "https://melodic-mandazi-722edb.netlify.app",
                         "https://verdant-llama-74155e.netlify.app",
-                        "https://keen-sprinkles-9cdff0.netlify.app",
+                        "https://restsysfront-production.up.railway.app",
                         "http://localhost:5173",
                         "http://localhost:8080")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
