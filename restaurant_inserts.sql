@@ -102,8 +102,8 @@ INSERT INTO administradores (tipo_documento, numero_documento, nombre, apellido,
 
 -- Inserts para la tabla usuarios
 INSERT INTO usuarios (tipo_documento, numero_documento, nombre, apellido, email, password, estado, ultimo_acceso, rol_id) VALUES
-('DNI', '12345671', 'Luis', 'Hernández', 'luis.hernandez@elbuensabor.com', '$2a$10$abcdefghijklmnopqrstuv', true, CURRENT_TIMESTAMP, 2),
-('DNI', '23456702', 'Ana', 'Castro', 'ana.castro@elbuensabor.com', '$2a$10$abcdefghijklmnopqrstuv', true, CURRENT_TIMESTAMP, 2),
+('DNI', '12345671', 'Paul', 'Arias', 'jordi.arias19@gmail.com', '123', true, CURRENT_TIMESTAMP, 2),
+('DNI', '23456702', 'Ana', 'Castro', 'p@g.com', '1', true, CURRENT_TIMESTAMP, 2),
 ('DNI', '34567013', 'Roberto', 'Vargas', 'roberto.vargas@elbuensabor.com', '$2a$10$abcdefghijklmnopqrstuv', true, CURRENT_TIMESTAMP, 2),
 ('DNI', '45670124', 'María', 'Silva', 'maria.silva@elbuensabor.com', '$2a$10$abcdefghijklmnopqrstuv', true, CURRENT_TIMESTAMP, 2),
 ('DNI', '56701235', 'Carlos', 'Rojas', 'carlos.rojas@elbuensabor.com', '$2a$10$abcdefghijklmnopqrstuv', true, CURRENT_TIMESTAMP, 2),
