@@ -19,7 +19,7 @@ public class MenuController {
     @GetMapping("/menu1")
     public ResponseEntity<?> getMenu1() {
         try {
-            File menuFile = new File("menu1.json");
+            File menuFile = new File("menuAdmin.json");
             Object menu = objectMapper.readValue(menuFile, Object.class);
             return ResponseEntity.ok(menu);
         } catch (IOException e) {
@@ -30,7 +30,7 @@ public class MenuController {
     @GetMapping("/menu2")
     public ResponseEntity<?> getMenu2() {
         try {
-            File menuFile = new File("menu2.json");
+            File menuFile = new File("menuMesero.json");
             Object menu = objectMapper.readValue(menuFile, Object.class);
             return ResponseEntity.ok(menu);
         } catch (IOException e) {

@@ -6,7 +6,7 @@
                 {
                     "label": "Dashboard",
                     "icon": "pi pi-fw pi-home",
-                    "to": "/dashboard"
+                    "to": "/"
                 }
             ]
         },
@@ -17,8 +17,19 @@
             "items": [
                 {
                     "label": "Pedidos",
-                    "icon": "pi pi-fw pi-receipt",
-                    "to": "/pages/pedidos"
+                    "icon": "pi pi-fw pi-book",
+                    "items": [
+                        {
+                            "label": "Ver pedidos",
+                            "icon": "pi pi-fw pi-receipt",
+                            "to": "/pages/pedidos"
+                        },
+                        {
+                            "label": "Crear pedido",
+                            "icon": "pi pi-fw pi-plus-circle",
+                            "to": "/pages/pedidoCrear"
+                        }
+                    ]
                 },
                 {
                     "label": "Productos",
@@ -36,7 +47,7 @@
                     "to": "/pages/mesas"
                 },
                 {
-                    "label": "Meseros",
+                    "label": "Usuarios",
                     "icon": "pi pi-fw pi-user",
                     "to": "/pages/meseros"
                 },

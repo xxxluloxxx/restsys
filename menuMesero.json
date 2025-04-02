@@ -1,0 +1,32 @@
+{
+    "menu": [
+        {
+            "label": "Macawa",
+            "icon": "pi pi-fw pi-briefcase",
+            "to": "/pages",
+            "items": [
+                {
+                    "label": "Pedidos",
+                    "icon": "pi pi-fw pi-book",
+                    "items": [
+                        {
+                            "label": "Ver pedidos",
+                            "icon": "pi pi-fw pi-receipt",
+                            "to": "/pages/pedidos"
+                        },
+                        {
+                            "label": "Crear pedido",
+                            "icon": "pi pi-fw pi-plus-circle",
+                            "to": "/pages/pedidoCrear"
+                        }
+                    ]
+                },
+                {
+                    "label": "Reservas",
+                    "icon": "pi pi-fw pi-book",
+                    "to": "/pages/reservas"
+                }
+            ]
+        }
+    ]
+}
