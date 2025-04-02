@@ -1,8 +1,8 @@
 package com.restaurant.restsys.controller;
 
-import java.io.File;
 import java.io.IOException;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,22 +19,24 @@ public class MenuController {
     @GetMapping("/menu1")
     public ResponseEntity<?> getMenu1() {
         try {
-            File menuFile = new File("menuAdmin.json");
-            Object menu = objectMapper.readValue(menuFile, Object.class);
+            ClassPathResource resource = new ClassPathResource("menuAdmin.json");
+            Object menu = objectMapper.readValue(resource.getInputStream(), Object.class);
             return ResponseEntity.ok(menu);
         } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Error al leer el archivo menuAdmin.json");
+            return ResponseEntity.internalServerError()
+                    .body("Error al leer el archivo menuAdmin.json: " + e.getMessage());
         }
     }
 
     @GetMapping("/menu2")
     public ResponseEntity<?> getMenu2() {
         try {
-            File menuFile = new File("menuMesero.json");
-            Object menu = objectMapper.readValue(menuFile, Object.class);
+            ClassPathResource resource = new ClassPathResource("menuMesero.json");
+            Object menu = objectMapper.readValue(resource.getInputStream(), Object.class);
             return ResponseEntity.ok(menu);
         } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Error al leer el archivo menuMesero.json");
+            return ResponseEntity.internalServerError()
+                    .body("Error al leer el archivo menuMesero.json: " + e.getMessage());
         }
     }
 }
