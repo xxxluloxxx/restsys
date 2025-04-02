@@ -28,6 +28,16 @@ public class NotificacionService {
 
     @Transactional
     public Notificacion save(Notificacion notificacion) {
+        // Verificar si existe una notificación activa para la mesa
+        Optional<Notificacion> notificacionExistente = notificacionRepository
+                .findByNumeroMesaAndEstado(notificacion.getNumeroMesa(), true);
+
+        // Si existe una notificación activa, no crear una nueva
+        if (notificacionExistente.isPresent()) {
+            return notificacionExistente.get();
+        }
+
+        // Si no existe una notificación activa, crear la nueva
         return notificacionRepository.save(notificacion);
     }
 
