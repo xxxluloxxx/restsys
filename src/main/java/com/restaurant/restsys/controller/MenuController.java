@@ -23,7 +23,7 @@ public class MenuController {
             Object menu = objectMapper.readValue(menuFile, Object.class);
             return ResponseEntity.ok(menu);
         } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Error al leer el archivo menu1.json");
+            return ResponseEntity.internalServerError().body("Error al leer el archivo menuAdmin.json");
         }
     }
 
@@ -34,7 +34,7 @@ public class MenuController {
             Object menu = objectMapper.readValue(menuFile, Object.class);
             return ResponseEntity.ok(menu);
         } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Error al leer el archivo menu2.json");
+            return ResponseEntity.internalServerError().body("Error al leer el archivo menuMesero.json");
         }
     }
 }
