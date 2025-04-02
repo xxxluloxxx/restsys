@@ -18,7 +18,7 @@ public class NotificacionService {
 
     @Transactional(readOnly = true)
     public List<Notificacion> findAll() {
-        return notificacionRepository.findAll();
+        return notificacionRepository.findByEstado(true);
     }
 
     @Transactional(readOnly = true)
@@ -43,5 +43,15 @@ public class NotificacionService {
             return notificacionRepository.save(notificacion);
         }
         return null;
+    }
+
+    @Transactional
+    public Notificacion marcarComoInactiva(Long id) {
+        return notificacionRepository.findById(id)
+                .map(notificacion -> {
+                    notificacion.setEstado(false);
+                    return notificacionRepository.save(notificacion);
+                })
+                .orElse(null);
     }
 }

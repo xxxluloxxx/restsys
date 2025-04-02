@@ -51,4 +51,10 @@ public class NotificacionController {
         notificacionService.deleteById(id);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/{id}/desactivar")
+    public ResponseEntity<Notificacion> marcarComoInactiva(@PathVariable Long id) {
+        Notificacion notificacion = notificacionService.marcarComoInactiva(id);
+        return notificacion != null ? ResponseEntity.ok(notificacion) : ResponseEntity.notFound().build();
+    }
 }

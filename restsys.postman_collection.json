@@ -2029,6 +2029,25 @@
                             ]
                         }
                     }
+                },
+                {
+                    "name": "Desactivar notificación",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/notificaciones/{{id}}/desactivar",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notificaciones",
+                                "{{id}}",
+                                "desactivar"
+                            ]
+                        }
+                    }
                 }
             ]
         },
