@@ -153,6 +153,15 @@ CREATE TABLE roles_permisos (
     UNIQUE(rol_id, permiso_id)
 );
 
+-- Tabla de Notificaciones
+CREATE TABLE notificacion (
+    id SERIAL PRIMARY KEY,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    numero_mesa INTEGER NOT NULL,
+    descripcion TEXT NOT NULL,
+    estado BOOLEAN DEFAULT true
+);
+
 -- Índices para mejorar el rendimiento
 CREATE INDEX idx_mesas_numero ON mesas(numero_mesa);
 CREATE INDEX idx_pedidos_fecha ON pedidos(fecha_pedido);

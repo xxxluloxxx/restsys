@@ -1922,6 +1922,117 @@
             ]
         },
         {
+            "name": "Notificaciones",
+            "item": [
+                {
+                    "name": "Obtener todas las notificaciones",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/notificaciones",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notificaciones"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener notificación por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/notificaciones/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notificaciones",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear notificación",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"numeroMesa\": 1,\n    \"descripcion\": \"Cliente solicita atención\",\n    \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/notificaciones",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notificaciones"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar notificación",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"numeroMesa\": 1,\n    \"descripcion\": \"Cliente solicita atención - Actualizado\",\n    \"estado\": false\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/notificaciones/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notificaciones",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar notificación",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/notificaciones/{{id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notificaciones",
+                                "{{id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
             "name": "Reportes",
             "item": [
                 {
